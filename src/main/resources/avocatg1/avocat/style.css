@@ -1,0 +1,40 @@
+/* Change font size, font color, and background color of table header */
+.table-view .column-header {
+    -fx-font-size: 14px; /* Set font size */
+    -fx-background-color:  #0D5F24; /* Set background color */
+    -fx-border-color: #002639; /* Set border color (optional) */
+    -fx-font-family: "Segoe UI", "Helvetica", sans-serif;
+    -fx-padding: 8px;
+}
+
+/* Change padding and alignment of table header text */
+.table-view .column-header .label {
+    -fx-font-size: 15px;
+    -fx-font-weight: 200;
+    -fx-padding: 5px 10px; /* Set padding */
+    -fx-alignment: CENTER; /* Set text alignment to center */
+    -fx-text-fill: #FFFFFF; /* Set text color */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: whitesmoke;
+    -fx-text-background-color:  #00846C;
+
+
+}
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.custom-label-shadow {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 10px;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.5, 2, 2);
+}

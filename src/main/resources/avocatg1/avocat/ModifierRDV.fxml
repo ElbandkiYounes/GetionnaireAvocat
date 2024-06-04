@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierRDVController">
+   <children>
+      <TextArea fx:id="noteRDV" layoutX="548.0" layoutY="205.0" prefHeight="495.0" prefWidth="768.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 5px;" />
+      <Button fx:id="btnModifier" layoutX="705.0" layoutY="723.0" mnemonicParsing="false" onAction="#modifierClinet" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #009688; -fx-text-fill: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@style.css" text="Modifier">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEffacer" layoutX="1030.0" layoutY="723.0" mnemonicParsing="false" onAction="#effacer" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #F44336; -fx-text-fill: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@style.css" text="Effacer">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icones/backspace-outline_.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="243.0" layoutY="351.0" prefHeight="37.0" prefWidth="240.0" />
+      <DatePicker fx:id="dateRDV" layoutX="48.0" layoutY="209.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 5px;" />
+      <ChoiceBox fx:id="etatRDV" layoutX="48.0" layoutY="308.0" prefHeight="64.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 5px;" />
+      <Label layoutX="548.0" layoutY="173.0" prefHeight="32.0" prefWidth="171.0" text="Commentaire :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="163.0" prefWidth="1444.0" style="-fx-background-color: #00391A;">
+         <children>
+            <Button fx:id="btnRetour" layoutX="1255.0" layoutY="45.0" mnemonicParsing="false" onAction="#retour" prefHeight="74.0" prefWidth="152.0" style="-fx-background-color: #FFC107; -fx-text-fill: #212121; -fx-border-radius: 5px;" stylesheets="@style.css" text="Retour">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icones/undo-left-round-square-line-duotone_.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="40.0" layoutY="45.0" prefHeight="74.0" prefWidth="504.0" text="Modifer Rendez-vous" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="48.0" layoutY="168.0" prefHeight="42.0" prefWidth="144.0" text="N Affaire:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="269.0" prefHeight="42.0" prefWidth="144.0" text="Etat :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="756.0" layoutY="737.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icones/change_.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
