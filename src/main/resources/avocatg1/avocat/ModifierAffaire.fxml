@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierAffaireController">
+   <children>
+      <AnchorPane prefHeight="163.0" prefWidth="1440.0" style="-fx-background-color: #00391A;">
+         <children>
+            <Button fx:id="retourButton" layoutX="1255.0" layoutY="45.0" mnemonicParsing="false" onAction="#retour" prefHeight="74.0" prefWidth="152.0" style="-fx-background-color: #FFC107; -fx-text-fill: #212121; -fx-border-radius: 5px;" stylesheets="@style.css" text="Retour">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icones/undo-left-round-square-line-duotone_.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="40.0" layoutY="45.0" prefHeight="74.0" prefWidth="425.0" text="Modifier affaire" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="nAffaire" disable="true" editable="false" layoutX="48.0" layoutY="209.0" prefHeight="64.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 6px; -fx-background-radius: 6;">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="269.0" prefHeight="42.0" prefWidth="144.0" text="Tribunal : ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tribunale" layoutX="48.0" layoutY="308.0" prefHeight="64.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 6px;">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="371.0" prefHeight="18.0" prefWidth="144.0" text="Type Affaire :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="typeAffaire" layoutX="48.0" layoutY="406.0" prefHeight="64.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 6px;">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="473.0" prefHeight="18.0" prefWidth="144.0" text="Type Client :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="typeClient" layoutX="48.0" layoutY="507.0" prefHeight="64.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 6px;">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="576.0" prefHeight="18.0" prefWidth="144.0" text="Date Affaire :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateAffaire" layoutX="48.0" layoutY="606.0" prefHeight="64.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 5px;" />
+      <Label layoutX="48.0" layoutY="680.0" prefHeight="18.0" prefWidth="144.0" text="Etat :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="etatAffaire" layoutX="48.0" layoutY="712.0" prefHeight="64.0" prefWidth="349.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 5px;" />
+      <Button fx:id="effacerButton" layoutX="1030.0" layoutY="723.0" mnemonicParsing="false" onAction="#effacer" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #F44336; -fx-text-fill: #ffffff; -fx-border-radius: 5px;" stylesheets="@style.css" text="Effacer">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icones/backspace-outline_.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="548.0" layoutY="173.0" prefHeight="32.0" prefWidth="171.0" text="Commentaire :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="note" layoutX="548.0" layoutY="205.0" prefHeight="495.0" prefWidth="768.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 5px;">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="ajouterButton" layoutX="706.0" layoutY="723.0" mnemonicParsing="false" onAction="#modifierAffaire" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #009688; -fx-text-fill: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@style.css" text="Modifier">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="144.0" layoutY="176.0" prefHeight="27.0" prefWidth="214.0" text="   Ce champ est Immodifiable" textFill="#ff2424">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="168.0" prefHeight="42.0" prefWidth="144.0" text="N Affaire:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="754.0" layoutY="737.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icones/change_.png" />
+         </image>
+      </ImageView>
+      <Label text="Label" />
+      <Label fx:id="error" layoutX="705.0" layoutY="768.0" textFill="RED" />
+   </children>
+</AnchorPane>

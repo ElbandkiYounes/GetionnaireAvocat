@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientController">
+    <children>
+        <TableView fx:id="tab" layoutX="16.0" layoutY="276.0" onMouseClicked="#modifierConsulterenabled" prefHeight="530.0" prefWidth="1404.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 2px; -fx-border-radius: 5px;" stylesheets="@style.css">
+            <columns>
+                <TableColumn fx:id="cinColumn" editable="false" prefWidth="216.0" resizable="false" sortable="false" text="CIN" />
+                <TableColumn fx:id="nomColumn" editable="false" prefWidth="259.0" resizable="false" sortable="false" text="Nom" />
+                <TableColumn fx:id="prenomColumn" editable="false" prefWidth="250.0" resizable="false" sortable="false" text="Prénom" />
+                <TableColumn fx:id="noteColumn" editable="false" prefWidth="676.0" resizable="false" sortable="false" text="Commentaire" />
+            </columns>
+        </TableView>
+        <TextField fx:id="nomR" layoutX="117.0" layoutY="189.0" prefHeight="42.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 5px;" />
+        <TextField fx:id="prenomR" layoutX="570.0" layoutY="189.0" prefHeight="42.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #212121; -fx-border-color: #BDBDBD; -fx-border-width: 1px; -fx-border-radius: 5px;" />
+        <Button fx:id="rechercherButton" layoutX="1191.0" layoutY="186.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="42.0" prefWidth="198.0" style="-fx-background-color: #2196F3; -fx-text-fill: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@style.css" text="Rechercher">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icones/search_.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <Button fx:id="btnConsulter" disable="true" layoutX="1312.0" layoutY="810.0" mnemonicParsing="false" onAction="#switchToConsulter" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: #4CAF50; -fx-text-fill: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@style.css" text="Consulter">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icones/folder-open-16-solid_.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <Button fx:id="btnModifier" disable="true" layoutX="1170.0" layoutY="810.0" mnemonicParsing="false" onAction="#switchToModifier" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: #F44336; -fx-text-fill: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@style.css" text="Modifier">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icones/change_.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <Button fx:id="btnAjouter" layoutX="1014.0" layoutY="810.0" mnemonicParsing="false" onAction="#switchToAjouter" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: #009688; -fx-text-fill: #FFFFFF; -fx-border-radius: 5px;" stylesheets="@style.css" text="Ajouter">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icones/user-add-plus_.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="errorPrenom" layoutX="575.0" layoutY="238.0" textFill="RED" />
+      <Label fx:id="errorNom" layoutX="121.0" layoutY="238.0" textFill="RED" />
+      <Button fx:id="btnSupprimer" disable="true" layoutX="865.0" layoutY="810.0" mnemonicParsing="false" onAction="#deleteClient" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: lightgrey; -fx-text-fill: #000000; -fx-border-radius: 5px;" stylesheets="@style.css" text="Supprimer">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icones/delete_.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane prefHeight="163.0" prefWidth="1440.0" style="-fx-background-color: #00391A;">
+         <children>
+            <Button fx:id="retourButton" layoutX="1255.0" layoutY="45.0" mnemonicParsing="false" onAction="#retour" prefHeight="74.0" prefWidth="152.0" style="-fx-background-color: #FFC107; -fx-text-fill: #212121; -fx-border-radius: 5px;" stylesheets="@style.css" text="Retour">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icones/undo-left-round-square-line-duotone_.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="40.0" layoutY="45.0" prefHeight="74.0" prefWidth="425.0" text="Clients" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="29.0" layoutY="194.0" prefHeight="32.0" prefWidth="198.0" text="Nom :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="191.0" prefHeight="32.0" prefWidth="198.0" text="Prenom :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
